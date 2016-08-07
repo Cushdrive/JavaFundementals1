@@ -50,6 +50,7 @@ public class Printer implements iMachine {
 
     @Override
     public void TurnOn() {
+        System.out.println("Warming up printer");
         machine.TurnOn();
     }
 
