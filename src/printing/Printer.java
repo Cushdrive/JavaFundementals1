@@ -4,13 +4,14 @@ package printing;
  * Created by jayson on 11/7/15.
  */
 //Demonstrates an Is-A relationship (inheritance)
-public class Printer extends printing.Machine {
+public class Printer implements iMachine {
     private String modelNumber;
     //Composition
     private PaperTray paperTray = new PaperTray();
+    private boolean isOn;
 
     public Printer(boolean isOn, String modelNumber) {
-        super(isOn);
+        this.isOn = isOn;
         this.modelNumber = modelNumber;
     }
 
@@ -50,7 +51,12 @@ public class Printer extends printing.Machine {
     @Override
     public void TurnOn() {
         System.out.println("Warming up print engine.");
-        super.TurnOn();
+        this.isOn = true;
+    }
+
+    @Override
+    public void TurnOff() {
+        this.isOn = false;
     }
 
     public void print (String text) {
