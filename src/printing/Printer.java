@@ -8,16 +8,16 @@ public class Printer implements iMachine {
     private String modelNumber;
     //Composition
     private PaperTray paperTray = new PaperTray();
-    private boolean isOn;
+    private Machine machine;
 
     public Printer(boolean isOn, String modelNumber) {
-        this.isOn = isOn;
         this.modelNumber = modelNumber;
+        machine = new Machine(isOn);
     }
 
     public void print(int copies) {
         String onStatus = "";
-        if (isOn) {
+        if (isOn()) {
             onStatus = " is On!";
         } else {
             onStatus = " is Off!";
@@ -50,13 +50,17 @@ public class Printer implements iMachine {
 
     @Override
     public void TurnOn() {
-        System.out.println("Warming up print engine.");
-        this.isOn = true;
+        machine.TurnOn();
     }
 
     @Override
     public void TurnOff() {
-        this.isOn = false;
+        machine.TurnOff();
+    }
+
+    @Override
+    public boolean isOn() {
+        return machine.isOn();
     }
 
     public void print (String text) {

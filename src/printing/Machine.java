@@ -3,8 +3,8 @@ package printing;
 /**
  * Created by jayson on 7/23/16.
  */
-public class Machine {
-    protected boolean isOn;
+public class Machine implements iMachine {
+    private boolean isOn;
 
     public Machine (boolean isOn) {
         this.isOn = isOn;
@@ -18,4 +18,11 @@ public class Machine {
     public void TurnOff() {
         isOn = false;
     }
+
+    @Override
+    public boolean isOn() {
+        return isOn;
+    }
+
+
 }
