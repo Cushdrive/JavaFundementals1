@@ -7,8 +7,10 @@ package printing;
  * and white printer, or a color printer. That will be specified by the class
  * that composes this class. This is accomplished by adding the <T>
  *
+ *     By using the keyword extends in the generic, you restrict the types of objects that can be used.
+ *
  */
-public class Printer<T> implements iMachine {
+public class Printer<T extends ICartridge> implements iMachine {
     private String modelNumber;
     //Composition
     private PaperTray paperTray = new PaperTray();
@@ -24,11 +26,11 @@ public class Printer<T> implements iMachine {
 
     //Demonstrates a method generic. This is not very useful until we restrict the
     //subset of types. Right now its all Object, so only the base Object functions can be called.
-    //U represents the type of the object that's passed in to the cartridge parameter.
-    public <U> void printUsingCartridge(U cartridge, String message) {
-        System.out.println(cartridge.toString());
+    //U represents the type of the object that's passed in to the cartridge parameter. We further
+    //restrict the generic type by using the extend keyword.
+    public <U extends ICartridge> void printUsingCartridge(U cartridge, String message) {
         System.out.println(message);
-        System.out.println(cartridge.toString());
+        System.out.println(cartridge.getFillPercentage());
     }
 
     public void print(int copies) {
