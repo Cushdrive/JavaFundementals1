@@ -16,6 +16,7 @@ import java.util.Map;
  *     By using the keyword extends in the generic, you restrict the types of objects that can be used.
  *
  */
+@PrintingDevice(defaultPrintMethod = "print", defaultNumberOfCopies = 5)
 public class Printer<T extends ICartridge> implements iMachine {
     private String modelNumber;
     //Composition
@@ -113,21 +114,21 @@ public class Printer<T extends ICartridge> implements iMachine {
 
     //Demonstrates how to iterate through a List and do something useful.
     public void outputPage(int pageNumber) {
-        //System.out.println(pages.get(pageNumber).getText());
-        PrintWriter writer = null;
-
-        try{
-            String path = HOME + "/temp/test2.txt";
-            writer = new PrintWriter(new FileWriter(path));
-            writer.println(pages.get(pageNumber).getText());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        finally {
-            if (writer != null){
-                writer.close();
-            }
-        }
+        System.out.println(pages.get(pageNumber).getText());
+//        PrintWriter writer = null;
+//
+//        try{
+//            String path = HOME + "/temp/test2.txt";
+//            writer = new PrintWriter(new FileWriter(path));
+//            writer.println(pages.get(pageNumber).getText());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        finally {
+//            if (writer != null){
+//                writer.close();
+//            }
+//        }
     }
 
     private void checkCopies(int copies) {
@@ -140,7 +141,6 @@ public class Printer<T extends ICartridge> implements iMachine {
         paperTray.addPaper(pages);
     }
 
-    @Deprecated
     public void printColors() {
         String[] colors = new String[] {"Red","Blue","Green","Yellow","Orange"};
 
