@@ -1,5 +1,8 @@
 package printing;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by jayson on 11/7/15.
  * Demonstrates an Is-A relationship (inheritance)
@@ -16,6 +19,7 @@ public class Printer<T> implements iMachine {
     private PaperTray paperTray = new PaperTray();
     private Machine machine;
     private T cartridge;
+    private List<Page> pages = new ArrayList<Page>();
 
     public Printer(boolean isOn, String modelNumber, T cartridge) {
         this.modelNumber = modelNumber;
@@ -52,13 +56,21 @@ public class Printer<T> implements iMachine {
         String texttoPrint = modelNumber + onStatus;
 
         while (copies > 0 && !paperTray.isEmpty()) {
-            System.out.println(texttoPrint);
+            pages.add(new Page(texttoPrint));
+
             copies--;
             paperTray.usePage();
         }
 
         if (paperTray.isEmpty() && (copies > 0)) {
             System.out.println("Could not complete job. Out of paper!");
+        }
+    }
+
+    //Demonstrates how to iterate through a List and do something useful.
+    public void outputPages() {
+        for (Page currentPage:pages) {
+            System.out.println(currentPage.getText());
         }
     }
 

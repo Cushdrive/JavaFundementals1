@@ -17,7 +17,7 @@ public class HelloWorld {
         //printer.printUsingCartridge(new ColorCartridge(),"Generic message.");
         //printOne(printer);
 
-        try {
+/*        try {
             printer.print(-1);
         } catch (IllegalArgumentException exception) {
             System.out.println(exception.getMessage());
@@ -25,7 +25,11 @@ public class HelloWorld {
         }
         finally {
             printer.TurnOff();
-        }
+        }*/
+
+        printer.loadPaper(10);
+        printer.print(5);
+        printer.outputPages();
 
     }
 
