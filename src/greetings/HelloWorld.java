@@ -2,22 +2,11 @@ package greetings;
 
 import printing.*;
 
-import java.io.File;
-import java.io.IOException;
-
 public class HelloWorld {
 
 
     public static void main(String[] args)
     {
-        //Checked Exception demo
-        File file = new File("C:\\test.txt");
-        try {
-            file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         //Now that we're using generics, we have to declare the subtype
         //of the printer when we instantiate it.
         Printer<ColorCartridge> printer = new Printer<ColorCartridge>(true,"MY PRINTER",new ColorCartridge());
