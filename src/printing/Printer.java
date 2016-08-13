@@ -38,6 +38,8 @@ public class Printer<T> implements iMachine {
     }
 
     public void print(int copies) {
+        checkCopies(copies);
+
         System.out.println(cartridge.toString());
         String onStatus = "";
 
@@ -57,6 +59,12 @@ public class Printer<T> implements iMachine {
 
         if (paperTray.isEmpty() && (copies > 0)) {
             System.out.println("Could not complete job. Out of paper!");
+        }
+    }
+
+    private void checkCopies(int copies) {
+        if (copies < 0) {
+            throw new IllegalArgumentException("Can't print less than 0 copies.");
         }
     }
 
