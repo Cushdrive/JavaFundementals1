@@ -89,6 +89,7 @@ public class Printer<T> implements iMachine {
     @Override
     public void TurnOff() {
         machine.TurnOff();
+        System.out.println("Printer is off.");
     }
 
     @Override

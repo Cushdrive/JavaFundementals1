@@ -21,6 +21,10 @@ public class HelloWorld {
             printer.print(-1);
         } catch (IllegalArgumentException exception) {
             System.out.println(exception.getMessage());
+            return;
+        }
+        finally {
+            printer.TurnOff();
         }
 
     }
