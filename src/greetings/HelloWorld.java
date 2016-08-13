@@ -17,29 +17,9 @@ public class HelloWorld {
         Printer<ColorCartridge> printer = new Printer<ColorCartridge>(true, "MY PRINTER", ColorCartridge.RED);
 
         printer.loadPaper(11);
-        printer.print(3);
-        printer.outputPage(2);
+        printer.printColors();
 
-        Path path = Paths.get("/Users/jayson/temp/newfile.txt");
 
-        //Creating a file
-        try {
-            Files.createFile(path);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-//        try {
-//            Files.deleteIfExists(path);
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//        }
-
-        try {
-            Files.move(path,Paths.get("/Users/jayson/temp/movedfile.txt"));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
 
     }
 }

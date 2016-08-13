@@ -140,6 +140,7 @@ public class Printer<T extends ICartridge> implements iMachine {
         paperTray.addPaper(pages);
     }
 
+    @Deprecated
     public void printColors() {
         String[] colors = new String[] {"Red","Blue","Green","Yellow","Orange"};
 
