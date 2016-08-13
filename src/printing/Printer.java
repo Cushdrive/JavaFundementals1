@@ -58,6 +58,7 @@ public class Printer<T extends ICartridge> implements iMachine {
         }
 
         String texttoPrint = modelNumber + onStatus;
+        texttoPrint+="|" + cartridge.printColor();
         int pageNumber = 1;
 
         while (copies > 0 && !paperTray.isEmpty()) {
