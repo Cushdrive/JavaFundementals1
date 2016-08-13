@@ -15,7 +15,7 @@ import java.util.Map;
  *     By using the keyword extends in the generic, you restrict the types of objects that can be used.
  *
  */
-public class Printer<T> implements iMachine {
+public class Printer<T extends ICartridge> implements iMachine {
     private String modelNumber;
     //Composition
     private PaperTray paperTray = new PaperTray();
