@@ -29,7 +29,7 @@ public class HelloWorld {
 
         printer.loadPaper(10);
         printer.print(5);
-        printer.outputPages();
+        printer.outputPage(3);
 
     }
 
