@@ -3,6 +3,8 @@ package greetings;
 import printing.*;
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
 
 public class HelloWorld {
@@ -30,20 +32,28 @@ public class HelloWorld {
             printer.TurnOff();
         }*/
 
-        printer.loadPaper(10);
-        printer.print(5);
-        //printer.outputPage(3);
+//        printer.loadPaper(10);
+//        printer.print(5);
+//        //printer.outputPage(3);
+//
+//        Set<Integer> mySet = new HashSet<Integer>();
+//        mySet.add(1);
+//        mySet.add(2);
+//        mySet.add(3);
+//        System.out.println(mySet.size());
+//
+//        for (Integer i:mySet) {
+//            printer.outputPage(i);
+//        }
 
-        Set<Integer> mySet = new HashSet<Integer>();
-        mySet.add(1);
-        mySet.add(2);
-        mySet.add(3);
-        System.out.println(mySet.size());
+        Queue<String> myQueue = new LinkedList<String>();
+        myQueue.offer("A");
+        myQueue.offer("B");
+        myQueue.offer("C");
 
-        for (Integer i:mySet) {
-            printer.outputPage(i);
+        while(myQueue.peek() != null) {
+            System.out.println(myQueue.poll().toString());
         }
-
     }
 
 /*    private static void printOne(Printer<? extends ICartridge> printer) {
