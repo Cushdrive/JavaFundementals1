@@ -2,10 +2,7 @@ package greetings;
 
 import printing.*;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class HelloWorld {
 
@@ -46,13 +43,45 @@ public class HelloWorld {
 //            printer.outputPage(i);
 //        }
 
-        Queue<String> myQueue = new LinkedList<String>();
-        myQueue.offer("A");
-        myQueue.offer("B");
-        myQueue.offer("C");
+//        Queue<String> myQueue = new LinkedList<String>();
+//        myQueue.offer("A");
+//        myQueue.offer("B");
+//        myQueue.offer("C");
+//
+//        while(myQueue.peek() != null) {
+//            System.out.println(myQueue.poll().toString());
+//        }
 
-        while(myQueue.peek() != null) {
-            System.out.println(myQueue.poll().toString());
+        Map<String,List<Integer>> testScores = new HashMap<String,List<Integer>>();
+        List<Integer> joescores = new ArrayList<Integer>();
+        joescores.add(80);
+        joescores.add(90);
+        joescores.add(97);
+        testScores.put("Joe",joescores);
+
+        List<Integer> amyscores = new ArrayList<Integer>();
+        amyscores.add(80);
+        amyscores.add(90);
+        amyscores.add(97);
+        testScores.put("Amy",amyscores);
+
+        List<Integer> fredscores = new ArrayList<Integer>();
+        fredscores.add(80);
+        fredscores.add(90);
+        fredscores.add(97);
+        testScores.put("Fred",fredscores);
+
+        printScores("Fred",testScores);
+        printScores("Joe",testScores);
+        printScores("Amy",testScores);
+    }
+
+    private static void printScores(String studentName, Map<String,List<Integer>> scoresMap){
+        List<Integer> scores = scoresMap.get(studentName);
+
+        System.out.println(studentName + " Scores:\n");
+        for (int score:scores) {
+            System.out.println(score + "\n");
         }
     }
 
