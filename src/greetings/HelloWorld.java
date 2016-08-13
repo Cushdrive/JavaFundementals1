@@ -11,11 +11,9 @@ public class HelloWorld {
         //Now that we're using generics, we have to declare the subtype
         //of the printer when we instantiate it.
         Printer<ColorCartridge> printer = new Printer<ColorCartridge>(true, "MY PRINTER", ColorCartridge.RED);
-//        printer.loadPaper(11);
-//        printer.print(3);
-//        printer.outputPage(2);
-        for(ColorCartridge cartridge : ColorCartridge.values()){
-            System.out.println(cartridge.printColor());
-        }
+
+        printer.loadPaper(11);
+        printer.print(3);
+        printer.outputPage(2);
     }
 }

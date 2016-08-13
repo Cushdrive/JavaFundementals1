@@ -1,5 +1,9 @@
 package printing;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -57,8 +61,8 @@ public class Printer<T extends ICartridge> implements iMachine {
             onStatus = " is Off!";
         }
 
-        String texttoPrint = modelNumber + onStatus;
-        texttoPrint+="|" + cartridge.printColor();
+        String texttoPrint = getTextFromFile();
+
         int pageNumber = 1;
 
         while (copies > 0 && !paperTray.isEmpty()) {
@@ -75,9 +79,41 @@ public class Printer<T extends ICartridge> implements iMachine {
         }
     }
 
+    private String getTextFromFile() {
+        FileReader reader = null;
+        BufferedReader bReader = null;
+
+        try {
+            String path = System.getProperty("user.home") + "/temp/test.txt";
+            reader = new FileReader(path);
+            bReader = new BufferedReader(reader);
+            String line, allText = "";
+
+            while((line = bReader.readLine()) != null) {
+                allText += line + "\n";
+            }
+            return allText;
+        }
+        catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return "";
+    }
+
     //Demonstrates how to iterate through a List and do something useful.
     public void outputPage(int pageNumber) {
-        System.out.println(pages.get(pageNumber).getText());
+        //System.out.println(pages.get(pageNumber).getText());
+        
     }
 
     private void checkCopies(int copies) {
