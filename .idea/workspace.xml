@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c931c0e-0524-4917-922b-0cb1153af3e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/greetings/HelloWorld.java" afterPath="$PROJECT_DIR$/src/greetings/HelloWorld.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/printing/Printer.java" afterPath="$PROJECT_DIR$/src/printing/Printer.java" />
     </list>
     <ignored path="Hello_World.iws" />
@@ -42,19 +41,19 @@
       <file leaf-file-name="Printer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/printing/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456">
-              <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.73426574">
+              <caret line="125" column="31" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1088#1102#0" expanded="true" />
-                <element signature="e#1374#1375#0" expanded="true" />
-                <element signature="e#1406#1407#0" expanded="true" />
-                <element signature="e#3909#3910#0" expanded="true" />
-                <element signature="e#3950#3951#0" expanded="true" />
-                <element signature="e#4463#4464#0" expanded="true" />
-                <element signature="e#4500#4501#0" expanded="true" />
-                <element signature="e#4539#4540#0" expanded="true" />
-                <element signature="e#4579#4580#0" expanded="true" />
+                <element signature="e#982#996#0" expanded="true" />
+                <element signature="e#1341#1342#0" expanded="true" />
+                <element signature="e#1373#1374#0" expanded="true" />
+                <element signature="e#4246#4247#0" expanded="true" />
+                <element signature="e#4287#4288#0" expanded="true" />
+                <element signature="e#4800#4801#0" expanded="true" />
+                <element signature="e#4837#4838#0" expanded="true" />
+                <element signature="e#4876#4877#0" expanded="true" />
+                <element signature="e#4916#4917#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -913,12 +912,12 @@
       <option name="number" value="Default" />
       <updated>1470598069133</updated>
       <workItem from="1470598201375" duration="2903000" />
-      <workItem from="1470610168276" duration="17331000" />
+      <workItem from="1470610168276" duration="17899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20234000" />
+    <option name="totallyTimeSpent" value="20802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -957,7 +956,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/printing/Printer.java</url>
-          <line>65</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -988,15 +987,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1088#1102#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#3909#3910#0" expanded="true" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#4463#4464#0" expanded="true" />
-            <element signature="e#4500#4501#0" expanded="true" />
-            <element signature="e#4539#4540#0" expanded="true" />
-            <element signature="e#4579#4580#0" expanded="true" />
+            <element signature="e#982#996#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#4246#4247#0" expanded="true" />
+            <element signature="e#4287#4288#0" expanded="true" />
+            <element signature="e#4800#4801#0" expanded="true" />
+            <element signature="e#4837#4838#0" expanded="true" />
+            <element signature="e#4876#4877#0" expanded="true" />
+            <element signature="e#4916#4917#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1115,19 +1114,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/printing/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456">
-          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.73426574">
+          <caret line="125" column="31" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1088#1102#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#3909#3910#0" expanded="true" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#4463#4464#0" expanded="true" />
-            <element signature="e#4500#4501#0" expanded="true" />
-            <element signature="e#4539#4540#0" expanded="true" />
-            <element signature="e#4579#4580#0" expanded="true" />
+            <element signature="e#982#996#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#4246#4247#0" expanded="true" />
+            <element signature="e#4287#4288#0" expanded="true" />
+            <element signature="e#4800#4801#0" expanded="true" />
+            <element signature="e#4837#4838#0" expanded="true" />
+            <element signature="e#4876#4877#0" expanded="true" />
+            <element signature="e#4916#4917#0" expanded="true" />
           </folding>
         </state>
       </provider>

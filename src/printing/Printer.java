@@ -1,9 +1,6 @@
 package printing;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,12 +25,14 @@ public class Printer<T extends ICartridge> implements iMachine {
     //private List<Page> pages = new ArrayList<Page>();
     //The Integer is the type of the Key in the map, and Page is the type of the value in the map.
     private Map<Integer,Page> pages = new HashMap<Integer,Page>();
+    private String HOME;
 
     public Printer(boolean isOn, String modelNumber, T cartridge) {
         this.modelNumber = modelNumber;
         machine = new Machine(isOn);
         //Stores a reference to the class subtype.
         this.cartridge = cartridge;
+        HOME = System.getProperty("user.home");
     }
 
     public T getCartridge() {
@@ -84,7 +83,7 @@ public class Printer<T extends ICartridge> implements iMachine {
         BufferedReader bReader = null;
 
         try {
-            String path = System.getProperty("user.home") + "/temp/test.txt";
+            String path = HOME + "/temp/test.txt";
             reader = new FileReader(path);
             bReader = new BufferedReader(reader);
             String line, allText = "";
@@ -113,7 +112,20 @@ public class Printer<T extends ICartridge> implements iMachine {
     //Demonstrates how to iterate through a List and do something useful.
     public void outputPage(int pageNumber) {
         //System.out.println(pages.get(pageNumber).getText());
-        
+        PrintWriter writer = null;
+
+        try{
+            String path = HOME + "/temp/test2.txt";
+            writer = new PrintWriter(new FileWriter(path));
+            writer.println(pages.get(pageNumber).getText());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (writer != null){
+                writer.close();
+            }
+        }
     }
 
     private void checkCopies(int copies) {
