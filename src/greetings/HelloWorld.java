@@ -2,6 +2,9 @@ package greetings;
 
 import printing.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class HelloWorld {
 
 
@@ -29,7 +32,17 @@ public class HelloWorld {
 
         printer.loadPaper(10);
         printer.print(5);
-        printer.outputPage(3);
+        //printer.outputPage(3);
+
+        Set<Integer> mySet = new HashSet<Integer>();
+        mySet.add(1);
+        mySet.add(2);
+        mySet.add(3);
+        System.out.println(mySet.size());
+
+        for (Integer i:mySet) {
+            printer.outputPage(i);
+        }
 
     }
 

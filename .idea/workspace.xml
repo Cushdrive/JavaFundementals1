@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c931c0e-0524-4917-922b-0cb1153af3e7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/greetings/HelloWorld.java" afterPath="$PROJECT_DIR$/src/greetings/HelloWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/printing/Printer.java" afterPath="$PROJECT_DIR$/src/printing/Printer.java" />
     </list>
     <ignored path="Hello_World.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +28,12 @@
       <file leaf-file-name="HelloWorld.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/greetings/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9277389">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.8251748">
+              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
-                <element signature="e#291#307#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#340#356#0" expanded="true" />
+                <element signature="e#1146#1155#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -898,12 +899,12 @@
       <option name="number" value="Default" />
       <updated>1470598069133</updated>
       <workItem from="1470598201375" duration="2903000" />
-      <workItem from="1470610168276" duration="10334000" />
+      <workItem from="1470610168276" duration="10645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13237000" />
+    <option name="totallyTimeSpent" value="13548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -991,7 +992,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
-            <element signature="e#291#307#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#340#356#0" expanded="true" />
+            <element signature="e#1146#1155#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1095,10 +1098,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/greetings/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9277389">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.8251748">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
-            <element signature="e#291#307#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#340#356#0" expanded="true" />
+            <element signature="e#1146#1155#0" expanded="true" />
           </folding>
         </state>
       </provider>
