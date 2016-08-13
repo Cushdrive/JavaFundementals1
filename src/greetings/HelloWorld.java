@@ -7,11 +7,16 @@ import java.io.IOException;
 
 public class HelloWorld {
 
-    //Method altered to throw IOException because createNewFile MAY throw the IOException Checked Exception.
-    public static void main(String[] args) throws IOException {
+
+    public static void main(String[] args)
+    {
         //Checked Exception demo
         File file = new File("C:\\test.txt");
-        file.createNewFile();
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //Now that we're using generics, we have to declare the subtype
         //of the printer when we instantiate it.
