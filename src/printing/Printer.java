@@ -44,9 +44,9 @@ public class Printer<T extends ICartridge> implements iMachine {
     //subset of types. Right now its all Object, so only the base Object functions can be called.
     //U represents the type of the object that's passed in to the cartridge parameter. We further
     //restrict the generic type by using the extend keyword.
-    public <U> void printUsingCartridge(U cartridge, String message) {
+    public <U extends ICartridge> void printUsingCartridge(U cartridge, String message) {
         System.out.println(message);
-        System.out.println(cartridge.toString());
+        //System.out.println(cartridge.toString());
     }
 
     public void print(int copies) {
